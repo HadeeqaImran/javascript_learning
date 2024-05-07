@@ -1,4 +1,5 @@
 # Javascript_Learning
 Javascript Learning Log at Dubizzle Labs
-## Access Token (Soon to Delete)
-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
+
+## Notes
+https://docs.google.com/document/d/13SOLJokiW7H3-UjGrd0409yGDDhvwNHispGJe9y8CaA/edit?usp=sharing

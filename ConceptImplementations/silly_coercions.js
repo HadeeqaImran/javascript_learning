@@ -31,3 +31,42 @@ console.log(!+[]+[]+![]); // Output: "truefalse", !+[] is true, [] is coerced to
 console.log(new Date(0) - 0); // Output: 0, new Date(0) is converted to the number of milliseconds since the epoch, which is 0
 
 console.log(new Date(0) + 0); // Output: "Thu Jan 01 1970 02:00:00 GMT+0200 (Eastern European Standard Time)0", new Date(0) is converted to a string, then concatenated with 0
+
+/*
+Boolean('')           // false
+Boolean(0)            // false     
+Boolean(-0)           // false
+Boolean(NaN)          // false
+Boolean(null)         // false
+Boolean(undefined)    // false
+Boolean(false)        // false
+*/
+
+
+/*
+Boolean({})             // true
+Boolean([])             // true
+Boolean(Symbol())       // true
+!!Symbol()              // true
+Boolean(function() {})  // true
+*/
+
+/*
+Number(null)                   // 0
+Number(undefined)              // NaN
+Number(true)                   // 1
+Number(false)                  // 0
+Number(" 12 ")                 // 12
+Number("-12.34")               // -12.34
+Number("\n")                   // 0
+Number(" 12s ")                // NaN
+Number(123)                    // 123
+*/
+
+/*When applying == to null or undefined, numeric conversion does not happen. 
+null equals only to null or undefined, and does not equal to anything else.*/
+
+/*NaN does not equal to anything even itself:
+if (value !== value) { console.log("we're dealing with NaN here") }*/
+
+/**/

@@ -26,6 +26,7 @@ let person = {
 }
 
 // Shallow Copy - Nested object's values can be changed if the copy object changes it
+// Spread operator and Object.assign() both present problems with nested objects.
 // In other words, only the reference gets copied.
 let updatedPerson = { ...person};
 updatedPerson.degree.title = "Data Science";
@@ -37,6 +38,10 @@ let deep_person = JSON.parse(JSON.stringify(person))
 deep_person.degree.title = "Software Engineering"
 console.log(person)
 console.log(deep_person);
+
+// JSON parsing will work fine unless there are funcitons associated to the object...
+// and some datatypes also get lost like the timestamps become string
+// For this you need the cloneDeep() function in "lodash" library
 
 
 // Scribble

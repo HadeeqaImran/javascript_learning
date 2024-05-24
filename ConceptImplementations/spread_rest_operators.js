@@ -29,7 +29,7 @@ let person = {
 // Spread operator and Object.assign() both present problems with nested objects.
 // In other words, only the reference gets copied.
 let updatedPerson = { ...person};
-updatedPerson.degree.title = "Data Science";
+updatedPerson.degree = "Data Science";
 console.log(person);
 console.log(updatedPerson);
 

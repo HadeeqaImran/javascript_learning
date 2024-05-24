@@ -19,15 +19,21 @@ async function getActivity() {
 // async - enables a function to know that a promise will be returned
 // await - actually waits for the promise to get returned
 
-function returnsPromise(val){
-    return new Promise(() => {
-        setTimeout(() => {
-            if (val == true){
-                resolve(true);
-            }
-            else{
-                reject(false);
-            }
-        }, 1000)
-    })
-}
+// Creating a new Promise
+const myPromise = new Promise((resolve, reject) => {
+    // Simulating an asynchronous operation (e.g., fetching data from a server)
+    setTimeout(() => {
+        // Assuming the operation was successful, we resolve the promise with a value
+        resolve("Data successfully fetched");
+    }, 2000); // Simulating a delay of 2 seconds
+});
+
+// Consuming the Promise
+myPromise.then((data) => {
+    // This callback function is executed when the promise is resolved
+    console.log(data); // Output: Data successfully fetched
+}).catch((error) => {
+    // This callback function is executed if the promise is rejected
+    console.error(error);
+});
+
